@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Streaming</string>
+    <string name="channel_name">channel_name</string>
+    <string name="channel_desc">channel_desc</string>
+</resources>

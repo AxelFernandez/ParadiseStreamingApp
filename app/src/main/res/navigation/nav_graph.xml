@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/streamFragment"
+        android:name="com.axelfernandez.streaming.ui.videoStreaming.StreamFragment"
+        android:label="stream_fragment"
+        tools:layout="@layout/stream_fragment" />
+    <fragment
+        android:id="@+id/audioStreamingFragment"
+        android:name="com.axelfernandez.streaming.ui.audioStreaming.AudioStreamingFragment"
+        android:label="audio_streaming_fragment"
+        tools:layout="@layout/audio_streaming_fragment" />
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.axelfernandez.streaming.ui.mainMenu.MainMenuFragment"
+        android:label="main_menu_fragment"
+        tools:layout="@layout/main_menu_fragment" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_mainMenuFragment_to_streamFragment"
+            app:destination="@id/streamFragment" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_mainMenuFragment_to_audioStreamingFragment"
+            app:destination="@id/audioStreamingFragment" />
+    </fragment>
+</navigation>
