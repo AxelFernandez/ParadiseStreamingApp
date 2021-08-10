@@ -4,50 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".ui.mainMenu.MainMenuFragment">
-<com.google.android.material.appbar.AppBarLayout
-    android:id="@+id/app_bar"
-    android:layout_width="match_parent"
-    android:layout_height="?actionBarSize"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/head_line"
-            style="@style/TextAppearance.AppCompat.Headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-black"
-            android:text="Paradise"
-            android:layout_gravity="center_vertical"
-            />
-    </LinearLayout>
 
-</com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/title"
         style="@style/TextAppearance.AppCompat.Headline"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-black"
-        android:text="Un oasis en tus Oidos"
-        android:layout_gravity="center_vertical"
+        android:text="Paradise: Un paraíso en tus sentidos."
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="parent"
         />
     <androidx.cardview.widget.CardView
         android:id="@+id/card_radio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_margin="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
@@ -71,15 +48,19 @@
                 style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Escucha nuestra radio Online"
+                android:text="Escucha nuestra radio online."
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/radio_title" />
 
             <ImageView
                 android:id="@+id/paradise_radio"
-                android:layout_width="150dp"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:maxWidth="100dp"
                 android:src="@drawable/radioparadise"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/radio_subtitle"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -95,7 +76,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="120dp"
             android:layout_margin="10dp">
 
             <TextView
@@ -103,7 +84,7 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pantalla Paradise"
+                android:text="Paradise TV"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,18 +93,27 @@
                 style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mira nuestra pantalla online"
+                android:text="Mira nuestro canal online."
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/video_title" />
 
             <ImageView
                 android:id="@+id/paradise_video"
-                android:layout_width="150dp"
-                android:layout_height="140dp"
-                android:src="@drawable/paradiselive"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/paradisetv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/video_subtitle"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:src="@drawable/paradiselive"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
