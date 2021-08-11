@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/streamFragment"
-        android:name="com.axelfernandez.streaming.ui.videoStreaming.StreamFragment"
+        android:name="com.axelfernandez.paradise.ui.videoStreaming.StreamFragment"
         android:label="stream_fragment"
         tools:layout="@layout/stream_fragment" />
     <fragment
         android:id="@+id/audioStreamingFragment"
-        android:name="com.axelfernandez.streaming.ui.audioStreaming.AudioStreamingFragment"
+        android:name="com.axelfernandez.paradise.ui.audioStreaming.AudioStreamingFragment"
         android:label="audio_streaming_fragment"
         tools:layout="@layout/audio_streaming_fragment" />
     <fragment
         android:id="@+id/mainMenuFragment"
-        android:name="com.axelfernandez.streaming.ui.mainMenu.MainMenuFragment"
+        android:name="com.axelfernandez.paradise.ui.mainMenu.MainMenuFragment"
         android:label="main_menu_fragment"
         tools:layout="@layout/main_menu_fragment" >
         <action
