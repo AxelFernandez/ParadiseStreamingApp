@@ -15,13 +15,13 @@ class StreamViewModel() : ViewModel() {
     var playerView: StyledPlayerView? = null
 
 
-    // https://videohd.live:19360/8056/8056.m3u8
+    // https://videohd.live:19360/8008/8008.m3u8
     // http://sonic1.veemesoft.com.ar:8056/live
     fun initializePlayer(context: Context) {
         player = SimpleExoPlayer.Builder(context).build()
         playerView?.player = player
         val mediaItem: MediaItem = MediaItem.Builder()
-            .setUri("https://videohd.live:19360/8056/8056.m3u8")
+            .setUri("https://videohd.live:19360/8008/8008.m3u8")
             .build()
         player?.setMediaItem(mediaItem)
         player?.addListener(ComponentListener())
